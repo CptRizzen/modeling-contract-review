@@ -1,13 +1,13 @@
 # Contract Review Skill — AI Protection for Models and Talent
 
-> AI-powered contract review that reads agency agreements the way a lawyer would — catching the clauses that trap models, flagging known scam agencies, and telling you exactly what to push back on before you sign.
+> AI-powered contract review that reads agency agreements the way a lawyer would — catching the clauses that trap models, flagging agencies the community has reported, and telling you exactly what to push back on before you sign.
 
 [![CI](https://github.com/CptRizzen/modeling-contract-review/actions/workflows/ci.yml/badge.svg)](https://github.com/CptRizzen/modeling-contract-review/actions/workflows/ci.yml)
 [![GitHub stars](https://img.shields.io/github/stars/CptRizzen/modeling-contract-review)](https://github.com/CptRizzen/modeling-contract-review/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
-[![Version](https://img.shields.io/badge/version-3.2.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.3.0-blue)](CHANGELOG.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · Gemini CLI · [26+ tools](https://agentskills.io)
@@ -27,7 +27,7 @@ This puts a lawyer-shaped first read in her pocket, for free, in the time it tak
 ---
 
 > **Forked from [evolsb/claude-legal-skill](https://github.com/evolsb/claude-legal-skill) by Chris Sheehan.**
-> The original skill is an excellent general-purpose contract review tool. This fork adds full modeling and talent agency contract support, a community-sourced scam agency database with auto-detection, and a plain-language guide written specifically for models. All original work remains Chris's. Additions are documented in [CHANGELOG.md](CHANGELOG.md).
+> The original skill is an excellent general-purpose contract review tool. This fork adds full modeling and talent agency contract support, a community-sourced agency report database with auto-detection, and a plain-language guide written specifically for models. All original work remains Chris's. Additions are documented in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
@@ -50,11 +50,11 @@ You don't need a scanner. Claude can read text directly from photos.
 2. Photograph every page (flat surface, good lighting, full page in frame)
 3. Upload all the photos and send this prompt:
 
-> "Review this modeling agency contract. I'm the model. Check for: upfront fees, commission rate and hidden charges, image and likeness rights duration, physical appearance control clauses, exclusivity scope, payment timeline, exit terms and penalties, and whether any agency names appear on known scam lists."
+> "Review this modeling agency contract. I'm the model. Check for: upfront fees, commission rate and hidden charges, image and likeness rights duration, physical appearance control clauses, exclusivity scope, payment timeline, exit terms and penalties, and whether any agency names appear on community report lists."
 
 > **If an agency pressures you to sign on the spot and won't let you take the contract to review — that pressure is itself a red flag.** A legitimate agency will give you time.
 
-**Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill checks against a community-maintained scam list automatically.
+**Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill automatically checks a community-maintained report list (unverified allegations, not proof).
 
 ---
 
@@ -72,14 +72,14 @@ git clone https://github.com/CptRizzen/modeling-contract-review ~/.codex/skills/
 
 ---
 
-## Why This Fork Exists
+## What This Fork Adds
 
 Models get hurt by contracts they don't fully understand. Five-year exclusivity traps. Clauses that let agencies demand haircuts, weight changes, or color without consent. "In perpetuity" image rights that let a company use your face forever. Upfront fees that are just scams. These aren't edge cases — they're common, and they end careers and create real harm.
 
 The original skill covers these areas in general terms. This fork goes further for models specifically:
 
 - A 14-category checklist built for modeling and talent agency agreements
-- Auto-detection of known scam agencies before the contract review even starts
+- Auto-detection of community-reported agencies before the contract review even starts
 - Specific redline language for the clauses that most affect models
 - Personal-safety prompts tied to community reports (framed as unverified allegations)
 - A handout written for models, not developers
@@ -270,7 +270,7 @@ Based on ContractEval benchmarks, Claude achieves F1 ~0.62 on clause extraction.
 
 ## Resources
 
-- **For models new to contract review:** [docs/for-models.md](docs/for-models.md) — plain-language guide, scam list, safety guidance
+- **For models new to contract review:** [docs/for-models.md](docs/for-models.md) — plain-language guide, community report list, safety guidance
 - **Full example outputs:** [NDA review](examples/nda-review.md) · [SaaS agreement](examples/saas-agreement-review.md) · [M&A deal](examples/ma-agreement-review.md) · [Modeling agency contract](examples/modeling-agency-review.md) · [Balanced agreement](examples/balanced-agreement.md)
 - **Generate Word/PDF redlines:** [legal-redline-tools](https://github.com/evolsb/legal-redline-tools)
 
@@ -303,7 +303,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first — the community report list has 
 - [ContractEval](https://arxiv.org/abs/2303.07389) — Contract understanding benchmarks
 
 **Modeling additions (this fork):**
-- Scam agency database sourced from [r/MODELING community](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
+- Community report list sourced from [r/MODELING community](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
 
 ---
 
