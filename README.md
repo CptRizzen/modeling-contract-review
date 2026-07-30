@@ -26,6 +26,14 @@ This puts a lawyer-shaped first read in her pocket, for free, in the time it tak
 
 ---
 
+## What you get
+
+<img src="examples/demo-modeling-review.png" alt="Example review of a modeling agency contract: red flags table, critical findings on appearance control and in-perpetuity image rights, and a ranked negotiation priority list" width="800">
+
+Run it yourself on the fictional sample contract in [`examples/sample-contracts/predatory-agency-agreement.md`](examples/sample-contracts/predatory-agency-agreement.md) — full output in [`examples/modeling-agency-review.md`](examples/modeling-agency-review.md).
+
+---
+
 > **Forked from [evolsb/claude-legal-skill](https://github.com/evolsb/claude-legal-skill) by Chris Sheehan.**
 > The original skill is an excellent general-purpose contract review tool. This fork adds full modeling and talent agency contract support, a community-sourced agency report database with auto-detection, and a plain-language guide written specifically for models. All original work remains Chris's. Additions are documented in [CHANGELOG.md](CHANGELOG.md).
 

@@ -1,5 +1,7 @@
 # Modeling Agency Agreement Review Example
 
+> Run against [`sample-contracts/predatory-agency-agreement.md`](sample-contracts/predatory-agency-agreement.md) — a fictional composite contract. Northvane Model Management does not exist; no real agency's agreement is reproduced or described here.
+
 ## Prompt
 
 ```
@@ -9,11 +11,11 @@ Review this modeling agency contract. I'm the model/talent.
 ## Example Output
 
 ```markdown
-# Contract Review: Premier Talent Group — Model Representation Agreement
+# Contract Review: Northvane Model Management — Model Representation Agreement
 
 **Document Type:** Modeling Agency Representation Agreement
 **Your Position:** Model / Talent
-**Counterparty:** Premier Talent Group LLC
+**Counterparty:** Northvane Model Management, LLC
 **Risk Level:** 🔴 High
 **Document Status:** Draft
 
@@ -67,7 +69,7 @@ an immediate red flag. Do not sign without substantial negotiation.
 ### 🔴 Critical
 
 **Upfront Comp Card Fee** (Section 5.1)
-> "Model agrees to pay Premier Talent Group a comp card production fee of $350 upon signing"
+> "Model agrees to pay Northvane Model Management a comp card production fee of $350 upon signing"
 
 - **Issue:** Legitimate agencies earn revenue only when models book paid work — upfront fees of any kind are a scam indicator
 - **Risk:** $350 paid before any work is booked; agency has zero incentive to perform

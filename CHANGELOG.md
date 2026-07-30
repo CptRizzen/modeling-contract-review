@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- `examples/sample-contracts/predatory-agency-agreement.md` — fictional composite agency contract assembling documented predatory clauses; safe to share and to test `skill.md` changes against
+- `examples/demo-modeling-review.png` — rendered demo of the modeling review, now shown in the README (plus the `.html` source it is generated from)
+- `examples/social-preview.png` and its generator script
+
+### Changed
+- Example review counterparty renamed to the clearly fictional "Northvane Model Management, LLC"
+
 ## [3.3.0] - 2026-07-30
 
 ### Added
