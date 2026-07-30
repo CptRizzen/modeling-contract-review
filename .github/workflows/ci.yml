@@ -24,14 +24,17 @@ jobs:
       - name: Check for broken links
         uses: lycheeverse/lychee-action@v2
         with:
-          # Reddit/Instagram/IMDb block CI user agents and 403 on every run.
+          # Social and AI-vendor sites block CI user agents, so 403/429 are
+          # treated as reachable. /stargazers 404s until the repo has a star.
           args: >-
             --no-progress
             --max-retries 2
+            --accept '200..=299,403,429'
             --exclude-path .git
             --exclude 'reddit\.com'
             --exclude 'instagram\.com'
             --exclude 'imdb\.com'
             --exclude 'linkedin\.com'
+            --exclude 'stargazers'
             '**/*.md'
           fail: true
