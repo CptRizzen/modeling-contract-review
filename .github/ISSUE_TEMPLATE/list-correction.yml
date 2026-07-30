@@ -1,0 +1,52 @@
+name: "✏️ Correct or remove a list entry"
+description: You are named on the community report list and believe the entry is inaccurate.
+title: "[Correction] "
+labels: ["list-correction", "priority"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Entries on the community report list are **unverified allegations** collected from public posts. They are not findings of fact and not accusations by this project. They can be wrong, out of date, or about a different business with a similar name.
+
+        **The entry is suspended from the list while your request is reviewed** — it comes out first, and only goes back if the original report can be substantiated. You do not need a lawyer and you do not need to prove a negative.
+
+        Prefer not to post publicly? Email **shawn.schultz@gmail.com** with "LIST CORRECTION" in the subject instead. Same process, same timeline.
+
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry
+      description: The name exactly as it appears in the list.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your relationship to the entry
+      options:
+        - I am the named individual
+        - I represent the named business
+        - I am the original reporter and want to withdraw or amend my report
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why the entry is inaccurate
+      description: Mistaken identity, resolved, never happened, outdated, or something else. Supporting links are welcome but not required.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: requested
+    attributes:
+      label: What are you asking for?
+      options:
+        - Remove the entry entirely
+        - Correct the wording
+        - Add a response noting the dispute
+    validations:
+      required: true

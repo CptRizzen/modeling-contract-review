@@ -2,13 +2,27 @@
 
 > AI-powered contract review that reads agency agreements the way a lawyer would — catching the clauses that trap models, flagging known scam agencies, and telling you exactly what to push back on before you sign.
 
+[![CI](https://github.com/CptRizzen/modeling-contract-review/actions/workflows/ci.yml/badge.svg)](https://github.com/CptRizzen/modeling-contract-review/actions/workflows/ci.yml)
 [![GitHub stars](https://img.shields.io/github/stars/CptRizzen/modeling-contract-review)](https://github.com/CptRizzen/modeling-contract-review/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
 [![Version](https://img.shields.io/badge/version-3.2.0-blue)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · Gemini CLI · [26+ tools](https://agentskills.io)
+
+> ⚖️ **This is not legal advice.** It is a first-pass reading tool that tells you what to ask and what to push back on. For anything with real money or multiple years on the line, have a lawyer look at it.
+
+---
+
+## Why this exists
+
+A friend of mine is a model. She turns down work — not because the jobs are bad, but because too many people she knows got burned by something they signed. Five-year exclusivity. "In perpetuity" image rights. A commission that quietly became 40% after "service charges." An agency that wanted $600 up front for a portfolio.
+
+None of that is exotic. It is standard predatory boilerplate, and it works because the person signing it has forty minutes in an agency office and no lawyer.
+
+This puts a lawyer-shaped first read in her pocket, for free, in the time it takes to photograph the pages.
 
 ---
 
@@ -67,7 +81,7 @@ The original skill covers these areas in general terms. This fork goes further f
 - A 14-category checklist built for modeling and talent agency agreements
 - Auto-detection of known scam agencies before the contract review even starts
 - Specific redline language for the clauses that most affect models
-- Safety warnings for individuals with documented trafficking and harassment claims
+- Personal-safety prompts tied to community reports (framed as unverified allegations)
 - A handout written for models, not developers
 
 ---
@@ -75,7 +89,7 @@ The original skill covers these areas in general terms. This fork goes further f
 ## What It Does
 
 Analyzes legal contracts and outputs:
-- **Scam agency check** — automatic 🚨 warning if the agency appears on the community scam list, before any other analysis
+- **Community report check** — automatic 🚨 warning if the agency has been reported by the r/MODELING community, before any other analysis (unverified allegations — see the disclaimer below)
 - **Risk assessment** with severity ratings (🔴 Critical / 🟡 Important / 🟢 Acceptable)
 - **Red flags quick scan** — instant danger sign detection
 - **Key terms table** with section references
@@ -102,15 +116,17 @@ legal-redline apply contract.docx redlined.docx \
 
 ## Features
 
-### Scam Agency Database
-Automatically checks the counterparty agency name against a community-sourced list of known scam modeling agencies from r/MODELING. If matched, a prominent warning appears at the top of the output before any analysis.
+### Community Report Database
+Automatically checks the counterparty agency name against a community-sourced list of modeling agencies reported on r/MODELING. If matched, a prominent warning appears at the top of the output before any analysis.
 
-The list includes 30+ agencies and individuals organized by category:
-- **Category 1** — agencies requiring upfront fees (scam pattern, 24 entries)
-- **Category 2** — outright scams that steal money and disappear
-- **Category 3** — sketchy based on communications
-- **Category 4** — unverified community concerns
-- **Category 5** — 🚨 dangerous individuals with sex trafficking and sexual harassment claims
+> ⚠️ **Every entry is an unverified allegation** posted by anonymous members of the public. None has been independently investigated or confirmed, and inclusion is **not** a statement that any business or person committed fraud, a crime, or any other wrongdoing. Treat the list as a prompt to research further, never as a verdict. Disputes and removal requests: [open an issue](https://github.com/CptRizzen/modeling-contract-review/issues) — see [SECURITY.md](SECURITY.md).
+
+The list covers 30+ names, organized by the type of report:
+- **Category 1** — reported to require upfront fees (24 entries)
+- **Category 2** — reported to take payment and disappear
+- **Category 3** — reported as evasive in communications
+- **Category 4** — miscellaneous unverified concerns
+- **Category 5** — 🚨 personal-safety reports about individuals (unverified allegations; the skill responds with safety precautions, not accusations)
 
 Source: [r/MODELING "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/) — community-maintained, updated periodically.
 
@@ -244,7 +260,7 @@ ln -s ~/Developer/modeling-contract-review ~/.claude/skills/modeling-contract-re
 - **Not legal advice** — always have material terms reviewed by qualified counsel
 - **US law focus** — analysis defaults to US; provisions vary by jurisdiction
 - **Context window** — very long contracts may need section-by-section review
-- **Scam list currency** — the scam agency database is community-sourced and may not reflect the most current information; always do independent research
+- **Community list is unverified** — every entry is an unproven allegation from an anonymous public post, not a finding of fact, and may be wrong or out of date; always do independent research
 
 ## Accuracy
 
@@ -257,7 +273,24 @@ Based on ContractEval benchmarks, Claude achieves F1 ~0.62 on clause extraction.
 - **For models new to contract review:** [docs/for-models.md](docs/for-models.md) — plain-language guide, scam list, safety guidance
 - **Full example outputs:** [NDA review](examples/nda-review.md) · [SaaS agreement](examples/saas-agreement-review.md) · [M&A deal](examples/ma-agreement-review.md) · [Modeling agency contract](examples/modeling-agency-review.md) · [Balanced agreement](examples/balanced-agreement.md)
 - **Generate Word/PDF redlines:** [legal-redline-tools](https://github.com/evolsb/legal-redline-tools)
-- **Found an issue or want to add an agency to the scam list:** [Open a GitHub issue](https://github.com/CptRizzen/modeling-contract-review/issues)
+
+---
+
+## Contributing
+
+You do not need to be a developer. The most useful contributions here are contract knowledge and firsthand experience.
+
+| I want to... | Go here |
+|---|---|
+| Report an agency or recruiter | [New community report](https://github.com/CptRizzen/modeling-contract-review/issues/new?template=agency-report.yml) |
+| Correct or remove an entry about me | [Correction request](https://github.com/CptRizzen/modeling-contract-review/issues/new?template=list-correction.yml) · [SECURITY.md](SECURITY.md) |
+| Tell us the review missed something | [Review-quality issue](https://github.com/CptRizzen/modeling-contract-review/issues/new?template=review-quality.yml) |
+| Suggest a feature or contract type | [Feature request](https://github.com/CptRizzen/modeling-contract-review/issues/new?template=feature-request.yml) |
+| Ask a question / share how it went | [Discussions](https://github.com/CptRizzen/modeling-contract-review/discussions) |
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) first — the community report list has stricter rules than the rest of the project. All participation is covered by the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+**Never commit a real contract to this repo.** See [SECURITY.md](SECURITY.md) for what happens to your contract data and how to redact before pasting it into any AI tool.
 
 ---
 

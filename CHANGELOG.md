@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1), `SECURITY.md` with a contract-data privacy section and a list correction/removal process
+- Issue forms: community report, list correction/removal, review quality, feature request; plus emergency and Discussions contact links
+- Pull request template and `CODEOWNERS`
+- CI: `skill.md` frontmatter validation (`.github/scripts/validate_skill.py`, with self-test) and a weekly broken-link check
+- Dependabot for GitHub Actions
+- "Why this exists" and "Contributing" sections in README
+
+### Changed
+- **Community report list reframed as unverified allegations throughout.** Category headings, the Step 0 warning block, README, and `docs/for-models.md` no longer state that any named business or person committed fraud or a crime. Category 5 now triggers safety precautions instead of repeating the allegation.
+- LICENSE retains Christopher Sheehan's copyright and adds one for the modeling additions
+
 ## [3.2.0] - 2026-06-06
 
 ### Added

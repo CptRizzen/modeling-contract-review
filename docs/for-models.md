@@ -341,19 +341,23 @@ A single consultation with an entertainment attorney (typically $150-400/hour) i
 
 ---
 
-## Known Scam Agencies (Community-Sourced List)
+## Community-Reported Agencies (Unverified)
 
-The following agencies have been flagged by the r/MODELING community on Reddit based on user reports, Google reviews, and personal experience. If an agency you are considering appears on this list, treat it as a serious warning sign and do additional research before engaging.
+> **Read this first.** Everything in this section is an **unverified allegation** posted by anonymous members of the public on Reddit. It has not been investigated or confirmed by anyone, and it is not a statement that any business or person here did something wrong. Names can be wrong, out of date, or refer to a different company with a similar name.
+>
+> Use it as a reason to research further — never as proof. If you believe an entry about you or your business is inaccurate, [open an issue](https://github.com/CptRizzen/modeling-contract-review/issues) and it will be reviewed promptly.
 
-If you paste a contract from one of these agencies into the AI tool, it will automatically flag the agency name at the top of its review.
+If an agency you are considering appears below, slow down and do additional research before engaging.
+
+If you paste a contract from one of these agencies into the AI tool, it will automatically flag the name at the top of its review.
 
 Source: [r/MODELING — "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
 
-### Agencies That Charge Upfront Fees (Scam Pattern)
+### Reported to Charge Upfront Fees
 
 Nine9 / Nine9.com, Empire Models, NYLA Talent, Preview Models, Couture Modeling NY, About Faces Modeling (Atlanta), Disstrikkt (Netherlands), New View (Cincinnati), Talent Inc., MAPS/West-38, Muse Management / Human Models Portland OR (now Human Models), PMTM Agency Chicago, Apollo Model Management / Ivan Andreas, Rebeca Scouting, Mmg, Into-modeling (New York), Evrolida, Tresidon, Mikes Best Talent Agency, Discovery Models, Photo Studio Group LLC / Studio One, Talent USA, Skin I'm In Model and Talent, MModels and Talents (Toronto)
 
-### Outright Scams
+### Reported as Taking Payment and Disappearing
 
 @sayoriyoshi / @sayoriyoshico (Instagram), Anthony Rhyne (independent recruiter), GlamourFlux (contested), ModelWebsiteHost.com
 
@@ -363,14 +367,16 @@ Avidlove, Top Model Europe, John Casablancas, Nation Management (nationmgmt.com)
 
 > **Note on email fraud:** Legitimate Next Model agency emails end in @nextmodels.com (with an S). Emails from @nextmodel.com (no S) are fraudulent.
 
-### 🚨 Individuals with Dangerous / Trafficking-Related Reports
+### 🚨 Personal-Safety Reports About Individuals (Unverified)
 
-If you are contacted by or have an interaction with any of the following, prioritize your safety and contact local authorities if needed:
+These are **unproven allegations from anonymous posts**. Nobody has verified them, no court has ruled on them, and this project is not accusing anyone of a crime. They are listed only so you take normal safety precautions and verify who you are dealing with.
 
-- **Eugene Khazin** (Backstage)
-- **Babak Eftekhari** (IMDb)
-- **Adam Chin** (Instagram: @svnhng)
-- **Anyone claiming to be a scout from Premier Models London** — verify by emailing safety@premiermodelmanagement.com before any meeting
+If any of these names comes up, verify the person's identity and employer independently, and follow the safety rule below. Contact local authorities if you ever feel unsafe.
+
+- **Eugene Khazin** (name raised in community reports; profile referenced on Backstage)
+- **Babak Eftekhari** (name raised in community reports; profile referenced on IMDb)
+- **Adam Chin** (name raised in community reports; Instagram @svnhng)
+- **Anyone claiming to be a scout from Premier Models London** — impersonation of a real agency is common; verify by emailing safety@premiermodelmanagement.com before any meeting
 
 ### Safety Rule for Street or DM Approaches
 

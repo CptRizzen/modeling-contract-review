@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🆘 You are in danger right now
+    url: https://humantraffickinghotline.org/
+    about: "Contact local law enforcement. US National Human Trafficking Hotline: 1-888-373-7888 (24/7, confidential). Do not use GitHub issues for emergencies."
+  - name: ❓ Question or general discussion
+    url: https://github.com/CptRizzen/modeling-contract-review/discussions
+    about: Ask how to use the skill, share how it worked for you, or talk through a contract situation.
+  - name: 🔐 Private security or privacy report
+    url: https://github.com/CptRizzen/modeling-contract-review/blob/main/SECURITY.md
+    about: Report privately by email instead of opening a public issue.
+  - name: ⚖️ This is not legal advice
+    url: https://www.americanbar.org/groups/legal_services/flh-home/
+    about: Find a real lawyer. Use this tool for a first pass and to know what to ask.

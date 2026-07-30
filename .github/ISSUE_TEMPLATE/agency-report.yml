@@ -1,0 +1,78 @@
+name: "🚩 Report an agency or recruiter"
+description: Report an agency, scout, or recruiter you believe is exploiting models.
+title: "[Report] "
+labels: ["community-report", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting. This helps other models avoid the same experience.
+
+        **Before you post — please read:**
+        - This issue is **public**. Do not include your legal name, address, phone number, or anything you would not want tied to you.
+        - Report what **happened to you or someone you know directly**. Rumors do not go on the list.
+        - Do not post the other person's private information — no home address, no phone number, no photos, no family members.
+        - Entries are published as **unverified allegations**, never as findings of fact.
+        - **If you are in danger, contact local law enforcement first.** US National Human Trafficking Hotline: 1-888-373-7888.
+
+  - type: input
+    id: name
+    attributes:
+      label: Agency, company, or account name
+      description: Exactly as it appears — plus the website or social handle if you have it.
+      placeholder: "Example Models LLC — examplemodels.com / @examplemodels"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: What kind of report is this?
+      options:
+        - Asked for money upfront (fees, classes, photo shoots, portfolio)
+        - Took payment and stopped responding
+        - Evasive or misleading communications
+        - Contract terms that trap models
+        - Impersonating a legitimate agency
+        - Personal-safety concern
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What they asked for, what they promised, what actually happened. Approximate dates help.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: firsthand
+    attributes:
+      label: How do you know this?
+      options:
+        - It happened to me
+        - It happened to someone I know personally
+        - I have a public source (news, court record, agency notice, live public post)
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Public source link (required if naming an individual person)
+      description: News article, court record, agency safety notice, or a still-live public post. Company and agency names do not require this; naming a private person does.
+      placeholder: "https://..."
+
+  - type: checkboxes
+    id: acknowledge
+    attributes:
+      label: Please confirm
+      options:
+        - label: This report is accurate to the best of my knowledge and I am not submitting it to retaliate against anyone.
+          required: true
+        - label: I have not included anyone's private personal information (address, phone, ID, photos, family).
+          required: true
+        - label: I understand this will be published as an unverified allegation and may be removed if disputed.
+          required: true

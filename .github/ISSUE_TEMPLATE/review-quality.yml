@@ -1,0 +1,50 @@
+name: "🐛 The review got something wrong"
+description: The skill missed a bad clause, flagged something that was fine, or gave bad guidance.
+title: "[Review] "
+labels: ["review-quality"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Redact before posting.** Remove names, addresses, dollar amounts, and anything identifying from any contract text you paste. A paraphrased clause is fine.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong
+      options:
+        - Missed a problematic clause (false negative)
+        - Flagged something that is actually standard (false positive)
+        - Wrong benchmark or threshold
+        - Bad or unusable redline language
+        - Wrong jurisdiction / legal detail
+        - Formatting or output structure problem
+    validations:
+      required: true
+
+  - type: input
+    id: tool
+    attributes:
+      label: Which AI tool and model
+      placeholder: "Claude Code / Opus 5, or Claude.ai web, or ChatGPT, etc."
+    validations:
+      required: true
+
+  - type: input
+    id: doctype
+    attributes:
+      label: Contract type
+      placeholder: "Modeling agency representation agreement"
+
+  - type: textarea
+    id: clause
+    attributes:
+      label: The clause (redacted)
+      render: text
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it did vs. what it should have done
+    validations:
+      required: true

@@ -1,0 +1,25 @@
+name: "💡 Feature or contract type request"
+description: Suggest a new check, contract type, jurisdiction, or improvement.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve
+      description: Who gets hurt today because this is missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like it to do
+    validations:
+      required: true
+
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction (if relevant)
+      placeholder: "California, UK, EU..."

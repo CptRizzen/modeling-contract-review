@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly link check so rotted links surface without a push.
+    - cron: "0 13 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate skill + links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate skill.md frontmatter
+        run: python3 .github/scripts/validate_skill.py
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Reddit/Instagram/IMDb block CI user agents and 403 on every run.
+          args: >-
+            --no-progress
+            --max-retries 2
+            --exclude-path .git
+            --exclude 'reddit\.com'
+            --exclude 'instagram\.com'
+            --exclude 'imdb\.com'
+            --exclude 'linkedin\.com'
+            --exclude-mail
+            '**/*.md'
+          fail: true

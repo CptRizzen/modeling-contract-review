@@ -18,23 +18,25 @@ Review legal contracts for risks, extract key terms, and suggest redlines. Built
 
 ---
 
-## Step 0: Known Scam Agency Check
+## Step 0: Community Report Check
 
-**Before any other analysis**, check if the counterparty agency name matches any entry in the Known Scam Agency List (see bottom of this skill).
+**Before any other analysis**, check if the counterparty agency name matches any entry in the Community-Reported Agency List (see bottom of this skill).
 
-If a match is found, display this block prominently at the very top of the output, before all other sections:
+If a match is found, display this block prominently at the very top of the output, before all other sections. Report it as an *unverified community allegation*, never as established fact:
 
 ```markdown
-## 🚨 SCAM AGENCY WARNING
+## 🚨 COMMUNITY WARNING — UNVERIFIED
 
-**[Agency Name] appears on the r/MODELING community scam list.**
+**[Agency Name] has been reported by members of the r/MODELING community.**
 
 Category: [insert category from list]
-Notes: [insert any notes from the list entry]
+Reported concern: [insert any notes from the list entry]
 
-This agency has been flagged by the modeling community based on word of mouth, Google reviews, and personal experience. Exercise extreme caution. Do NOT sign or pay anything until you have independently verified this agency's legitimacy.
+These reports are unverified allegations from anonymous members of the public — word of mouth, Google reviews, and self-reported experience. They have not been independently investigated or confirmed, and they are not a finding that this agency did anything wrong. Names can be mistaken or out of date.
 
-Sources: r/MODELING "The Ultimate Scam Agency List" (reddit.com/r/MODELING/comments/1fif93l)
+Treat this as a reason to slow down and research, not as proof. Do not sign or pay anything until you have independently verified this agency's legitimacy.
+
+Source: r/MODELING "The Ultimate Scam Agency List" (reddit.com/r/MODELING/comments/1fif93l)
 
 ---
 ```
@@ -497,14 +499,20 @@ Check these danger signs FIRST before deep analysis:
 
 ---
 
-## Known Scam Agency List (Community-Sourced)
+## Community-Reported Agency List (Unverified Allegations)
 
-> Source: r/MODELING "The Ultimate Scam Agency List" — compiled from word of mouth, Google reviews, and personal experience on the r/MODELING subreddit. Updated periodically.
-> Original post: reddit.com/r/MODELING/comments/1fif93l
+> **Important — read before using this list.** Every entry below is an *unverified allegation* reported by members of the public on the r/MODELING subreddit, compiled from word of mouth, Google reviews, and self-reported personal experience. Nothing here has been independently investigated, confirmed, or adjudicated. Inclusion is **not** a statement of fact that any named business or person committed fraud, a crime, or any other wrongdoing. Names may be mistaken, outdated, or refer to a different entity with a similar name.
+>
+> Treat this list as a prompt to do your own research — never as a verdict.
+>
+> Source: r/MODELING "The Ultimate Scam Agency List" — reddit.com/r/MODELING/comments/1fif93l
+>
+> To dispute or request removal of an entry, open an issue at
+> github.com/CptRizzen/modeling-contract-review/issues — see SECURITY.md for the removal process.
 
-Check the counterparty name against this list in Step 0. Partial matches (e.g., "Nine9" matching "Nine9.com") count as a match.
+Check the counterparty name against this list in Step 0. Partial matches (e.g., "Nine9" matching "Nine9.com") count as a match. Always present a match as *"has been reported by community members"*, never as *"is a scam"*.
 
-### Category 1 — Require Upfront Payment (Photo Shoot / Classes)
+### Category 1 — Reported to Require Upfront Payment (Photo Shoot / Classes)
 
 - Nine9 / Nine9.com
 - Empire Models
@@ -531,7 +539,7 @@ Check the counterparty name against this list in Step 0. Partial matches (e.g., 
 - Skin I'm In Model and Talent
 - MModels and Talents (Toronto)
 
-### Category 2 — Outright Scams (Will Steal Money and Disappear)
+### Category 2 — Reported as Taking Payment and Disappearing
 
 - @sayoriyoshi / @sayoriyoshico (Instagram)
 - Anthony Rhyne (independent modeling recruiter)
@@ -551,18 +559,20 @@ Check the counterparty name against this list in Step 0. Partial matches (e.g., 
 - Rune Modeling
 - Starlight Talent Agency
 - beautifulyou_fashiontour (Instagram) / beautifulmode.com
-- Willy_scouts (Instagram) — possible human trafficking involvement
+- Willy_scouts (Instagram) — community members raised unverified trafficking concerns
 - Most unsolicited Instagram DMs offering free/discounted clothing in exchange for posts
 - Note: Legitimate Next Model emails end in @nextmodels.com (with an S) — @nextmodel.com (no S) is fraudulent
 
-### Category 5 — 🚨 DANGEROUS: Sex Trafficking / Sexual Harassment Claims
+### Category 5 — 🚨 Personal-Safety Reports (Unverified Allegations Against Individuals)
 
-**If a user mentions any of the following individuals or situations, immediately include a safety warning.**
+**These are unproven allegations posted by anonymous members of the public. None have been verified, and none are findings of fact or accusations by this project.** Their only purpose here is to prompt ordinary personal-safety precautions. Never state or imply that a named person committed a crime.
 
-- **Eugene Khazin** — listed on Backstage
-- **Babak Eftekhari** — profile on IMDb
-- **Adam Chin** — Instagram @svnhng
-- **Individuals impersonating Premier Models London scouts** — If you are unsure, email safety@premiermodelmanagement.com to verify identity before any meeting
+If a user mentions any of the following names or situations, do not repeat the allegation — instead output the general safety rule below and advise independent verification of the person's identity and employer.
+
+- **Eugene Khazin** — name raised in community reports (profile referenced on Backstage)
+- **Babak Eftekhari** — name raised in community reports (profile referenced on IMDb)
+- **Adam Chin** — name raised in community reports (Instagram @svnhng)
+- **Individuals impersonating Premier Models London scouts** — impersonation of a legitimate agency; if unsure, email safety@premiermodelmanagement.com to verify identity before any meeting
 
 **General safety rule to include in output whenever a street-approach or DM-approach is mentioned:**
 > If approached on the street or via DM and asked to model, always ask if someone you know is allowed to accompany you to the shoot or interview. If the answer is no, leave immediately and go to a populated area. Tell friends and family where you are going. Have a location-sharing app active.
