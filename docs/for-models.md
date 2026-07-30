@@ -351,7 +351,7 @@ If an agency you are considering appears below, slow down and do additional rese
 
 If you paste a contract from one of these agencies into the AI tool, it will automatically flag the name at the top of its review.
 
-Source: [r/MODELING — "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
+Source: [r/MODELING — "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/) — last verified 2026-07-30.
 
 ### Reported to Charge Upfront Fees
 

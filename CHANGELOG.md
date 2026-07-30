@@ -8,6 +8,7 @@
 - `examples/social-preview.png` and its generator script
 
 ### Changed
+- Community report list verified against the r/MODELING source thread on 2026-07-30 — no new entries; both list locations now carry the verification date
 - Example review counterparty renamed to the clearly fictional "Northvane Model Management, LLC"
 
 ## [3.3.0] - 2026-07-30

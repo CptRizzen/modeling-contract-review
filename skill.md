@@ -507,6 +507,8 @@ Check these danger signs FIRST before deep analysis:
 >
 > Source: r/MODELING "The Ultimate Scam Agency List" — reddit.com/r/MODELING/comments/1fif93l
 >
+> Last verified against the source thread: 2026-07-30.
+>
 > To dispute or request removal of an entry, open an issue at
 > github.com/CptRizzen/modeling-contract-review/issues — see SECURITY.md for the removal process.
 
