@@ -33,6 +33,5 @@ jobs:
             --exclude 'instagram\.com'
             --exclude 'imdb\.com'
             --exclude 'linkedin\.com'
-            --exclude-mail
             '**/*.md'
           fail: true
